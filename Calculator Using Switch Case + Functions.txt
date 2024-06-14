@@ -1,0 +1,78 @@
+#include<stdio.h>
+
+float add(float x,float y);
+float minus(float x,float y);
+float into(float x,float y);
+float divide(float x,float y);
+
+float add(float x,float y)
+{
+	return x+y;
+}
+float minus(float x,float y)
+{
+	float z;
+	if(x>y){
+		z=x-y;
+	}
+	else
+	z=y-x;
+	return z;
+}
+float into(float x,float y)
+{
+	return x*y;
+}
+float divide(float x,float y)
+{
+	float z;
+	if(x>y){
+		z=x/y;
+	}
+	else
+	z=y/x;
+	return z;
+}
+main()
+{
+	float n1,n2,sum,mul,min,div;
+	int choice;
+	printf("Enter Num 1 :");
+	scanf("%f",&n1);
+	printf("Enter Num 2 :");
+	scanf("%f",&n2);
+	
+	printf("\nEnter 1 for Sum");
+	printf("\nEnter 2 for Minus");
+	printf("\nEnter 3 for Multiply");
+	printf("\nEnter 4 for Divide\n");
+	
+	printf("\nEnter Choice Here :");
+	scanf("%d",&choice);
+	
+	switch(choice)
+	{
+		case 1:
+	sum=add(n1,n2);
+	printf("\nSum of %.1f and %.1f is :%.1f",n1,n2,sum);
+	break;
+	
+	case 2:
+		min=minus(n1,n2);
+	printf("\nDifference of %.1f and %.1f is :%.1f",n1,n2,min);
+	break;
+	
+	case 3:
+	mul=into(n1,n2);
+	printf("\nProduct of %.1f and %.1f is :%.1f",n1,n2,mul);
+	break;
+	
+	case 4:
+	div=divide(n1,n2);
+	printf("\nDivision of %.1f and %.1f is :%.1f",n1,n2,div);
+	break;
+	
+	default:
+	printf("\nInvalid Input!");	
+	}	
+}

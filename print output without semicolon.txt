@@ -1,0 +1,27 @@
+Method #1 _ _ _ _ _ 
+
+#include<stdio.h>
+void main()
+{
+	if(printf("Hello"))
+	{}
+}
+
+
+Method #2 _ _ _ _ _
+
+#include<stdio.h>
+void main()
+{
+	switch(printf("Hello"))
+	{}
+}
+
+Method #3 _ _ _ _ _
+
+#include<stdio.h>
+void main()
+{
+	while(!printf("Hello"))
+	{}
+}
